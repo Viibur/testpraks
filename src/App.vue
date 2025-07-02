@@ -49,7 +49,7 @@ function getAsukoht(asukoht) {
   <h2>TEST</h2>
   <ul>
     <li v-for="instrument in instruments" :key="instrument.id">{{ instrument.name }} {{ getAsukoht(instrument.asukoht) }} 
-      <button v-on:click=meetod(instrument.asukoht)>NUPP</button>
+      <button v-if="instrument.asukoht.includes('LINESTRING')" v-on:click=meetod(instrument.asukoht)>NUPP</button>
     </li>
   </ul>
 <div id="map"></div>
